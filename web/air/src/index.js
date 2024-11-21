@@ -19,13 +19,15 @@ initVChartSemiTheme({
     isWatchingThemeSwitch: true,
 });
 
+const baseUrl = process.env.REACT_APP_BASE_URL || "/"; 
+document.querySelector('base').setAttribute('href', baseUrl);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const {Sider, Content, Header} = Layout;
 root.render(
     <React.StrictMode>
         <StatusProvider>
             <UserProvider>
-                <BrowserRouter>
+                <BrowserRouter  basename={BASE_URL}>
                     <Layout>
                         <Sider>
                             <SiderBar/>

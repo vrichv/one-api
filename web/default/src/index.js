@@ -13,6 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { StatusProvider } from './context/Status';
 import { BASE_URL } from './config';
 
+document.querySelector('base').setAttribute('href', BASE_URL);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
